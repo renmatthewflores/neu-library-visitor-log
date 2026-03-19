@@ -1,22 +1,13 @@
-// ============================================================
-//  FIREBASE CONFIGURATION
-//  Replace the values below with your own Firebase project config.
-//  Get these from: Firebase Console → Project Settings → General
-// ============================================================
-
 export const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT_ID.appspot.com",
-  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-  appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyBjOZPu8zkb3JhzMeNM1mApd4EMvXAAB-A",
+  authDomain: "neu-library-visitor-log-1bc3d.firebaseapp.com",
+  projectId: "neu-library-visitor-log-1bc3d",
+  storageBucket: "neu-library-visitor-log-1bc3d.firebasestorage.app",
+  messagingSenderId: "538924023857",
+  appId: "1:538924023857:web:7027ffd3d24423877f5510"
 };
 
-// ============================================================
-//  ADMIN EMAILS
-//  List of emails that are allowed to switch to Admin role.
-// ============================================================
 export const ADMIN_EMAILS = [
   "jcesperanza@neu.edu.ph"
+  "renmatthew.flores@neu.edu.ph"
 ];
