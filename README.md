@@ -1,10 +1,10 @@
 # 📚 NEU Library Visitor Log
 
-> A secure, role-based library visitor tracking web application for **Nueva Ecija University of Science and Technology**.
+> A secure, role-based library visitor tracking web application for **New Era University**.
 
 ## 🔗 Live Application
 
-**[https://YOUR-PROJECT-ID.web.app](https://YOUR-PROJECT-ID.web.app)**
+https://renmatthewflores.github.io/neu-library-visitor-log/
 
 > ⚠️ Replace this URL with your actual Firebase Hosting URL after deployment (see Deployment section below).
 
