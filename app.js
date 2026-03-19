@@ -26,19 +26,6 @@ import {
 
 import { firebaseConfig, ADMIN_EMAILS } from "./firebase-config.js";
 
-// Handle redirect result on page load
-getRedirectResult(auth).then((result) => {
-  if (result?.user) {
-    const email = result.user.email || "";
-    if (!email.endsWith("@neu.edu.ph") && !ADMIN_EMAILS.includes(email)) {
-      signOut(auth);
-      renderLogin("Access is restricted to @neu.edu.ph accounts only.");
-    }
-  }
-}).catch((err) => {
-  console.error(err);
-});
-
 // ──────────────────────────────────────────────
 //  Firebase Init
 // ──────────────────────────────────────────────
@@ -617,6 +604,8 @@ onAuthStateChanged(auth, async (user) => {
       }
     }
 
+   
+   
     render();
   } else {
     state.user = null;
@@ -627,5 +616,19 @@ onAuthStateChanged(auth, async (user) => {
   }
 });
 
+// Handle redirect result on page load
+getRedirectResult(auth).then((result) => {
+  if (result?.user) {
+    const email = result.user.email || "";
+    if (!email.endsWith("@neu.edu.ph") && !ADMIN_EMAILS.includes(email)) {
+      signOut(auth);
+    }
+  }
+}).catch((err) => {
+  console.error(err);
+});
+
+
 // Initial render (show loading)
 render();
+
