@@ -573,21 +573,18 @@ function googleSVG() {
 //  Auth State Observer
 // ──────────────────────────────────────────────
 onAuthStateChanged(auth, async (user) => {
-  if (user) {
-    // ── Enforce @neu.edu.ph domain on every auth state change ─────────
-    if (!user.email?.endsWith("@neu.edu.ph")) {
+ if (user) {
+    if (!user.email?.endsWith("@neu.edu.ph") && !ADMIN_EMAILS.includes(user.email)) {
       await signOut(auth);
       state.loading = false;
       renderLogin("Access is restricted to <strong>@neu.edu.ph</strong> accounts only.");
       return;
     }
-    // ─────────────────────────────────────────────────────────────────
     state.user = user;
-    // Default role
     state.role = ADMIN_EMAILS.includes(user.email) ? "user" : "user";
     state.loading = false;
+    render();
 
-    // Log visitor on sign in (once per session via sessionStorage)
     const sessionKey = `neu_logged_${user.uid}_${new Date().toDateString()}`;
     if (!sessionStorage.getItem(sessionKey)) {
       try {
