@@ -10,4 +10,4 @@ export const firebaseConfig = {
 export const ADMIN_EMAILS = [
   "jcesperanza@neu.edu.ph"
   "renmatthew.flores@neu.edu.ph"
-];
+  ];
