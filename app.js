@@ -128,7 +128,7 @@ async function handleGoogleSignIn() {
     await signInWithRedirect(auth, provider);
 
     // ── Enforce institutional domain ──────────────────────────────────
-    if (!email.endsWith("@neu.edu.ph")) {
+    if (!user.email?.endsWith("@neu.edu.ph") && !ADMIN_EMAILS.includes(user.email)) {
       await signOut(auth);
       renderLogin("Access is restricted to <strong>@neu.edu.ph</strong> accounts only. Please use your institutional email.");
       return;
