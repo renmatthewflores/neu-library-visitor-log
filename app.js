@@ -105,7 +105,7 @@ function renderLogin(error = "") {
     <div class="login-page">
       <div class="login-card">
         <div class="login-emblem">📚</div>
-        <div class="institution">Nueva Ecija University of Science and Technology</div>
+        <div class="institution">New Era University</div>
         <h1>Library Visitor Log</h1>
         <p class="subtitle">Sign in with your institutional Google account to continue.</p>
         <div class="divider"></div>
